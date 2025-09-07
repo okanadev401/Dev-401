@@ -1,1 +1,175 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
+body {
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+  text-align: center;
+  text-decoration: dotted;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px #0ff);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px #0ff;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg,#00f,#0ff);
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0ff;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #0ff;
+}
+
+/* Sections */
+section {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+text-align: center;
+}
+
+.card {
+  background: #111;
+  padding: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00f;
+  transition: transform 0.5s, box-shadow 0.5s;
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+  box-shadow: 0 0 50px #0ff;
+  text-align: center;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form button {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+form input {
+  background: #111;
+  color: #fff;
+}
+
+form button {
+  background: linear-gradient(45deg,#0ff,#00f);
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #0ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a0a0a;
+    color: #0ff;
+    font-size: 0.9rem;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.author-badge {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #0008;
+    color: #0ff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 8px;
+    z-index: 10;
+}
